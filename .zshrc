@@ -27,17 +27,25 @@ fi
 # > User configuration
 ##--------------------------------------------------------------------------------------------------
 
-export PATH="$PATH:/Users/steve/.rvm/gems/ruby-2.2.3/bin:/Users/steve/.rvm/gems/ruby-2.2.3@global/bin:/Users/steve/.rvm/rubies/ruby-2.2.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/steve/.rvm/bin:/Users/steve/.rvm/bin:/Users/steve/.rvm/bin:/Users/steve/.rvm/bin:/Users/steve/.rvm/bin:/Users/steve/.rvm/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
+# Load oh-my-zsh things
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
+
+#--------------------------------------------------------------------------------------------------
+## > Path
+#--------------------------------------------------------------------------------------------------
+
+# Load path if existent
+source ~/dotfiles/path.sh
+
+
 #--------------------------------------------------------------------------------------------------
 ## > Aliases
 #--------------------------------------------------------------------------------------------------
+
 source ~/dotfiles/alias.sh
 
 
