@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp -rv /tmp/current/dotfiles ~
+cp -rv /tmp/current/ ~/dotfiles
