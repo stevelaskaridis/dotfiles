@@ -1,3 +1,10 @@
 #!/bin/bash
 
-cp -rv /tmp/current/ ~/dotfiles
+DOTFILES_DIR="dotfiles"
+
+cd ~
+if [ -d $DOTFILES_DIR ]; then
+  mv $DOTFILES_DIR $DOTFILES_DIR.old
+fi
+
+cp -rv /tmp/current/ $DOTFILES_DIR
