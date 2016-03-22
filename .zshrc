@@ -3,7 +3,11 @@
 ##--------------------------------------------------------------------------------------------------
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/steve/.oh-my-zsh
+if [ `uname` = 'Darwin' ];then
+  export ZSH=/Users/steve/.oh-my-zsh
+elif [`uname` = 'Linux' ];then
+  export ZSH=/home/steve/.oh-my-zsh
+fi
 
 # Theme
 ZSH_THEME="pygmalion"
