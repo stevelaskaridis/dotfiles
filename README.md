@@ -17,6 +17,38 @@ The aim of disclosing these filea are mainly:
 * To improve over time
 * To restore previous configurations if something goes wrong
 
+## Deployment
+
+For deployment, we are using [Capistrano](https://github.com/capistrano/capistrano).
+
+In order to run:
+
+* If you need any PATH variables, check **path.sh**.
+*  If you need to run to remote machine, update **config/deploy/production.rb**:
+```ruby
+["#{current_user}@localhost"]
+
+# into
+
+["<your_user>@<your_machine>"]
+```
+* If your user is not steve, change **.zshrc**:
+```bash
+
+if [ `uname` = 'Darwin' ];then
+  export ZSH=/Users/<your_user>/.oh-my-zsh
+elif [`uname` = 'Linux' ];then
+  export ZSH=/home/<your_user>/.oh-my-zsh
+fi
+
+```
+* Commit you changes and push into your repo
+* Change **config/deploy.rb** `repo_url` to your own remote.
+* Run from the main directory
+```
+cap production deploy
+```
+
 
 ## Sources
 
