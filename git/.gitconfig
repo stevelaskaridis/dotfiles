@@ -1,0 +1,29 @@
+[user]
+	name = Steve Laskaridis
+	email = stevelaskaridis@gmail.com
+[color]
+        ui = auto
+[core]
+        editor = vim
+	excludesfile = /Users/steve/.gitignore_global
+[alias]
+        m = "!f() { git ls-files -m | uniq; }; f"
+        co = checkout
+        ci = commit
+        st = status
+        hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+        type = cat-file -t
+        dump = cat-file -p
+	br = branch
+[merge]
+        tool = vimdiff
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Development/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f

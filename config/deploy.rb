@@ -5,9 +5,6 @@ set :deploy_to, '/tmp'
 set :use_sudo, false
 set :log_level, :info
 
-#set :linked_files, 
-#set :linked_dirs,
-
 set :shell, ask('bash, zsh or both?', 'both', echo: true)
 set :shell, fetch(:shell)
 
