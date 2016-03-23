@@ -25,10 +25,19 @@ namespace :dotfiles do
     end
   end
 
+  desc 'Deploy git dotfiles'
+  task :deploy_git do
+    on roles(:all) do
+      execute "#{deploy_to}/current/config/deploy_git.sh"
+    end
+  end
+
+
   if fetch(:shell) == 'both'
     after 'deploy:publishing', :deploy_bash
     after 'deploy:publishing', :deploy_zsh
   else
     after 'deploy:publishing', "deploy_#{fetch(:shell)}".to_sym
   end
+  after 'deploy:publishing', :deploy_git
 end
