@@ -5,7 +5,7 @@
 # Path to your oh-my-zsh installation.
 if [ `uname` = 'Darwin' ];then
   export ZSH=/Users/steve/.oh-my-zsh
-elif [`uname` = 'Linux' ];then
+elif [ `uname` = 'Linux' ];then
   export ZSH=/home/steve/.oh-my-zsh
 fi
 
