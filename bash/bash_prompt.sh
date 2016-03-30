@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
   # regular colors
   K="\[\033[0;30m\]"    # black
@@ -44,4 +44,4 @@ function rvm_prompt {
 }
 
 # export PS1="\h•$BY\$(ssh_prompt)$RESET\W: $R\$(rvm_prompt) $G\$(git_prompt)$RESET$ "
-export PS1="$BB\h$RESET•:$BY\$(ssh_prompt)$RESET\W $G\$(git_prompt)$RESET$ "
+export PS1="$BB\h$RESET • $BY\$(ssh_prompt)$RESET\W: $G\$(git_prompt)$RESET$ "
