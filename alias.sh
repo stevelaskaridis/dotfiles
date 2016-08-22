@@ -4,7 +4,11 @@
 alias rm='rm -i'
 alias Apps='cd /Applications'
 alias ll='ls -al'
+alias sl='ls'
 alias l="ls"
+
+# Initialize docker
+alias startdocker="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'"
 
 # Navigate to ansible directory
 alias gotoansible='cd ~/Documents/Work/Grid/ansible/'
