@@ -14,7 +14,7 @@ alias startdocker="bash --login '/Applications/Docker/Docker Quickstart Terminal
 alias gotoansible='cd ~/Documents/Work/Grid/ansible/'
 
 # Navigate to work directories
-alias gotowork='cd ~/Documents/Work/CERN/Documents/'
+alias gotowork='cd ~/Documents/Work/'
 alias gotocern='cd ~/Documents/Work/CERN/'
 alias gotoprojects='cd ~/Documents/Work/Grid/projects'
 alias gotogrid='cd ~/Documents/Work/Grid/'
