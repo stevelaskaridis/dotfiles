@@ -6,6 +6,7 @@ alias Apps='cd /Applications'
 alias ll='ls -al'
 alias sl='ls'
 alias l="ls"
+alias lh='ls -lt | head -n 10'
 
 # Initialize docker
 alias startdocker="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'"
