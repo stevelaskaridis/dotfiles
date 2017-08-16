@@ -12,43 +12,22 @@ This repository contains my own setup, which can be used both on OS X and on Lin
 
 ## Aim
 
-The aim of disclosing these filea are mainly:
+The aim of disclosing these files are mainly:
 * In order to easily clone them from different machines
 * To improve over time
 * To restore previous configurations if something goes wrong
 
 ## Deployment
 
-For deployment, we are using [Capistrano](https://github.com/capistrano/capistrano).
+For deployment, we are using a simple bash script (`setup.sh`)
 
 In order to run:
 
 * If you need any PATH variables, check **path.sh**.
-*  If you need to run to remote machine, update **config/deploy/production.rb**:
-```ruby
-["#{current_user}@localhost"]
-
-# into
-
-["<your_user>@<your_machine>"]
-```
-* If your user is not steve, change **.zshrc**:
-```bash
-
-if [ `uname` = 'Darwin' ];then
-  export ZSH=/Users/<your_user>/.oh-my-zsh
-elif [`uname` = 'Linux' ];then
-  export ZSH=/home/<your_user>/.oh-my-zsh
-fi
-
-```
-* Commit you changes and push into your repo
-* Change **config/deploy.rb** `repo_url` to your own remote.
 * Run from the main directory
 ```
-cap production deploy
+./setup.sh
 ```
-
 
 ## Sources
 
