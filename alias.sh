@@ -37,3 +37,9 @@ function mkcd(){
   mkdir $1
   cd $1
 }
+
+function priv() {
+    if [ "$1" = "firefox" ] || [ "$1" = "chrome" ];then
+        ~/dotfiles/scripts/anonymous_browsing/$1_priv.sh
+    fi
+}
