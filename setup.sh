@@ -14,6 +14,7 @@ function install_zsh() {
 
 function install_common() {
   source scripts/deploy_git.sh
+  source scripts/deploy_vim.sh
 }
 
 UNATTENDED=0
