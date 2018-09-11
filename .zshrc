@@ -4,9 +4,10 @@ source ~/.zshrc.old
 ##--------------------------------------------------------------------------------------------------
 
 # Path to your oh-my-zsh installation.
-if [ `uname` = 'Darwin' ];then
+OS_VERSION="$(uname)"
+if [ "$OS_VERSION" = 'Darwin' ];then
   export ZSH=/Users/steve/.oh-my-zsh
-elif [ `uname` = 'Linux' ];then
+elif [ "$OS_VERSION" = 'Linux' ];then
   export ZSH=/home/steve/.oh-my-zsh
 fi
 
@@ -17,10 +18,10 @@ ZSH_THEME="pygmalion"
 ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Plugins
-if [ `uname` = 'Linux' ];then
-  plugins=(git git-extras bundler ruby bundler rake capistrano chucknorris) 
-elif [ `uname` = 'Darwin' ];then
-  plugins=(git git-extras osx ruby bundler rake capistrano)
+if [ "$OS_VERSION" = 'Linux' ];then
+  plugins=(git git-extras ruby chucknorris) 
+elif [ $OS_VERSION = 'Darwin' ];then
+  plugins=(git git-extras osx ruby)
 fi
 
 
