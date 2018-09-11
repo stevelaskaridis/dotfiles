@@ -42,6 +42,7 @@ function mkcd(){
 OS_VERSION=`uname`
 if [ "$OS_VERSION" = 'Darwin' ];then
   alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+  alias firefox="/Applications/Firefox.app/Contents/MacOS/firefox"
 elif [ "$OS_VERSION" = 'Linux' ];then
   alias chrome="google-chrome"
 fi
@@ -49,7 +50,7 @@ fi
 # Create private session from CLI
 function priv() {
     if [ "$1" = "firefox" ] || [ "$1" = "chrome" ];then
-        ~/dotfiles/scripts/anonymous_browsing/$1_priv.sh
+        source ~/dotfiles/scripts/anonymous_browsing/$1_priv.sh
     fi
 }
 
