@@ -17,13 +17,15 @@ alias gotoansible='cd ~/Documents/Work/Grid/ansible/'
 # Navigate to work directories
 alias gotowork='cd ~/Documents/Work/'
 alias gotocern='cd ~/Documents/Work/CERN/'
+alias gotointerviews="cd ~/Documents/Interviews/"
 alias gotoprojects='cd ~/Documents/Work/Grid/projects'
 alias gotogrid='cd ~/Documents/Work/Grid/'
 alias gotogsoc='cd ~/Desktop/GSOC/'
 
 # Navigate to university directories
 alias gotouni='cd ~/Documents/University/'
-alias gotothesis='cd ~/Documents/University/AUTH/CS/Thesis/'
+alias gotocam="cd ~/Documents/Cambridge/MPhil\ in\ Advanced\ Computer\ Science"
+alias gotothesis="cd ~/Documents/Cambridge/MPhil\ in\ Advanced\ Computer\ Science/Thesis/MobileSensing/"
 
 # Navigate to bookshelf
 alias gotobooks='cd ~/Downloads/Bookshelf/'
@@ -39,7 +41,7 @@ function mkcd(){
 }
 
 
-OS_VERSION=`uname`
+OS_VERSION="$(uname)"
 if [ "$OS_VERSION" = 'Darwin' ];then
   alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
   alias firefox="/Applications/Firefox.app/Contents/MacOS/firefox"
