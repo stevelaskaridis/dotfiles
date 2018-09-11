@@ -38,8 +38,22 @@ function mkcd(){
   cd $1
 }
 
+
+OS_VERSION=`uname`
+if [ "$OS_VERSION" = 'Darwin' ];then
+  alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+elif [ "$OS_VERSION" = 'Linux' ];then
+  alias chrome="google-chrome"
+fi
+
+# Create private session from CLI
 function priv() {
     if [ "$1" = "firefox" ] || [ "$1" = "chrome" ];then
         ~/dotfiles/scripts/anonymous_browsing/$1_priv.sh
     fi
+}
+
+# Chrome headless pdf from website
+function wwwpdf {
+  chrome --headless --disable-gpu --print-to-pdf $1
 }
