@@ -4,3 +4,7 @@
 # > Python
 #--------------------------------------------------------------------------------------------------
 
+CONDA_PATH="$HOME/miniconda3/"
+if [ -d  $CONDA_PATH ]; then
+    export PATH="$PATH:$CONDA_PATH/bin"
+fi
