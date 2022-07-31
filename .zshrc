@@ -19,9 +19,9 @@ ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Plugins
 if [ "$OS_VERSION" = 'Linux' ];then
-  plugins=(git git-extras ruby chucknorris) 
+  plugins=(git git-extras ruby chucknorris)
 elif [ $OS_VERSION = 'Darwin' ];then
-  plugins=(git git-extras osx ruby)
+  plugins=(git git-extras macos ruby)
 fi
 
 
