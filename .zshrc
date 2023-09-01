@@ -38,6 +38,10 @@ export EDITOR='vim'
 # UTF-8
 export LANG=en_US.UTF-8
 
+# History
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000000
+SAVEHIST=10000000
 
 #--------------------------------------------------------------------------------------------------
 ## > Path
